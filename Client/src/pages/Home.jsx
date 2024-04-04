@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://book-management-system-backend-beryl.vercel.app/books')
+      .get('https://book-management-system-backend-beryl.vercel.app')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
