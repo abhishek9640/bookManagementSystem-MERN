@@ -4,7 +4,7 @@ import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
 import { MdOutlineAddBox } from 'react-icons/md';
 import BooksCard from '../components/home/BooksCard';
-import BooksTable from '../components/home/BooksTable';
+import BooksTable from '../components/home/Bookstable';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://book-management-system-backend-beryl.vercel.app')
+      .get('http://localhost:5555/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
